@@ -8,8 +8,10 @@ router.get('/', function(req, res, next) {
 	res.render('login');
 });
 
-router.get('/list',(req,res)=>{
-	if(req.query.yhm == users[0].username && req.query.mm == users[0].password){
+router.post('/list',(req, res, next)=>{
+	var username = req.body.username;
+  	var password = req.body.password;
+	if(username == users[0].username && password == users[0].password){
 		res.render('list',{chapterList});
 	}
 	else{

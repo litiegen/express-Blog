@@ -98,14 +98,10 @@
     <div class="login">
         <div class="leftpart"></div>
         <div class="loginform">
-            <form class="myform" action="http://localhost:3000/list" method="GET">
-                <input type="text" autocomplete="off" placeholder="帐号" class="el-input__inner"  
-                id="username" name="yhm"/>
-                
-                <input type="password" autocomplete="off" placeholder="密码" class="el-input__inner"  
-                id="pwd" name="mm"/>
-            
-                <button type="submit" class="el-button login-btn-submit el-button--primary" id="login"><!----><!----><span>登录</span></button>
+            <form class="myform" action="/list" method="POST">
+                <input type="text" autocomplete="off" placeholder="帐号" class="el-input__inner"  id="username" name="username"/> 
+              <input type="password" autocomplete="off" placeholder="密码" class="el-input__inner"  id="pwd" name="password" />
+              <input type="submit" class="el-button login-btn-submit el-button--primary" id="login" value="登录"><!----><!----></button>
             </form>
         </div>
     </div>
